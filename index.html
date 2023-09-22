@@ -1,0 +1,20 @@
+index.html (inside the templates folder):
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask SQLite App</title>
+</head>
+<body>
+    <form method="post">
+        <textarea name="note"></textarea>
+        <input type="submit" value="Add Note">
+    </form>
+
+    <ul>
+        {% for note in notes %}
+            <li>{{ note[1] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
